@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Morya Mobile Shopee</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 20px;
+      margin: 0;
+      color: orange;
+    }
+
+    .profile-container {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .sidebar {
+      width: 250px;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 12px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: orange;
+    }
+
+    .content {
+      flex: 1;
+      padding: 10px 20px;
+    }
+
+    .content h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .info-box {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .info-box p {
+      margin: 8px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      background: orange;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: darkorange;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Morya Mobile Shopee</h1>
+    <div>
+      <a href="index.html" style="color:white; text-decoration:none; margin-right:15px;">Home</a>
+      <a href="products.html" style="color:white; text-decoration:none; margin-right:15px;">Products</a>
+      <a href="logout.html" style="color:white; text-decoration:none;">Logout</a>
+    </div>
+  </header>
+
+  <div class="profile-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>My Profile</h2>
+      <ul>
+        <li><a href="#">👤 Account Info</a></li>
+        <li><a href="#">📦 My Orders</a></li>
+        <li><a href="#">❤️ Wishlist</a></li>
+        <li><a href="#">🏠 Addresses</a></li>
+        <li><a href="#">💳 Payment Methods</a></li>
+        <li><a href="#">⚙️ Settings</a></li>
+        <li><a href="#">🎁 Offers & Coupons</a></li>
+        <li><a href="#">🚪 Logout</a></li>
+      </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <h2>Account Information</h2>
+      <div class="info-box">
+        <p><strong>Name:</strong> Divesh Vilas Patel</p>
+        <p><strong>Email:</strong> user@example.com</p>
+        <p><strong>Mobile:</strong> +91 98765 43210</p>
+        <button class="btn">Edit Profile</button>
+      </div>
+
+      <h2>My Orders</h2>
+      <div class="info-box">
+        <p><strong>Order #1001</strong> – iPhone 15 Pro – <span style="color:green;">Delivered</span></p>
+        <p><strong>Order #1002</strong> – Realme 12 Pro – <span style="color:orange;">Pending</span></p>
+        <button class="btn">View All Orders</button>
+      </div>
+
+      <h2>Saved Addresses</h2>
+      <div class="info-box">
+        <p><strong>Home:</strong> Nandurgarh, Pune, Maharashtra</p>
+        <p><strong>Office:</strong> Indira College, Pune</p>
+        <button class="btn">Add New Address</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

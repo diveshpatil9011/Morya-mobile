@@ -1,1 +1,0 @@
-# Morya-mobile-shopee

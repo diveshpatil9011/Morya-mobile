@@ -1,4 +1,310 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>मोरया मोबाईल</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f6f8;
+      color: #212529;
+      transition: background 0.2s, color 0.2s;
+    }
+    header {
+      background: #1f1f2e;
+      color: #fff;
+      padding: 1rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 { font-size: 2rem; color: #d90429; }
+    header p { color: #ffcc00; margin-top: 0.3rem; font-weight: 600; }
+    nav { margin-top: 1rem; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: 500; }
+
+    .search-bar {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .search-bar input {
+      padding: 0.6rem 1rem;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 25px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #d90429;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product {
+      background: #fefefe;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product h3 { margin: 0.5rem 0; font-size: 1.1rem; }
+    .product p { margin: 0.2rem 0; }
+    .discount { color: green; font-weight: bold; }
+
+    .contact-icons a {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+      color: #212529;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-icons a i {
+      margin-right: 10px;
+      font-size: 1.2rem;
+      color: #d90429;
+    }
+
+    footer {
+      background: #1f1f2e;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Toggle Switch */
+    .toggle-btn {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+      cursor: pointer;
+      background: #333;
+      color: #fff;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      border: none;
+      transition: background 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: #555;
+    }.reviews {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.review {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.review img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 0.5rem;
+}
+
+.review h4 {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #d90429;
+}
+
+.review p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.stars {
+  color: #ffcc00;
+  font-size: 1.1rem;
+}
+/* === Carousel Slider === */
+.carousel {
+  background: #000;
+  overflow: hidden;
+  color: #fff;
+  padding: 10px 0;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: slide 20s infinite linear;
+  width: max-content;
+}
+
+.slide {
+  min-width: 100vw;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #ffcc00;
+  padding: 0.5rem;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100vw); }
+  66% { transform: translateX(-200vw); }
+  100% { transform: translateX(0); }
+}
+details {
+  margin-top: 0.8rem;
+  background: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+details summary {
+  font-weight: 600;
+  color: #d90429;
+  outline: none;
+}
+.top-nav, .bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+}
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+}
+.discount {
+  color: green;
+  font-weight: bold;
+}
+  .btn {
+    padding: 8px 12px;
+    background-color: #f90;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .btn:hover {
+    background-color: #ff6600;
+  }
+ .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .dark-mode nav {
+      background-color: #222;
+    }
+
+    .dark-mode .product {
+      border-color: #444;
+    }
+.view-specs {
+  background-color: #fff;
+  color: #d32f2f;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.view-specs {
+  background-color: #fff;
+  color: red;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dark-mode .view-specs {
+  background-color: #333;
+  color: red;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>मोरया मोबाईल</h1>
+    <p>Sales & Accessories | बेस्ट मोबाईल रिपेअरिंग</p>
+    <nav>
+      <a href="/" class="btn">Home</a>
+      <a href="#products" class="btn">Products</a>
+      <a href="/" class="btn">About</a>
+      <a href="#contact" class="btn">Contact</a>
+<div style="display: flex; gap: 10px; align-items: center; margin-left: auto;">
+  <a href="signup.html" class="btn">Sign Up</a>
+  <a href="Account.html" class="btn">Profile</a>
+
+</div>
+    </nav>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+    <div class="search-bar">
+    
+      <input type="text" id="searchInput" placeholder="Search smartphones..." onkeyup="searchProducts()" />
+    </div>
+  </header>
+<section class="carousel">
+  <div class="carousel-track">
+    <div class="slide">🔥 Get 10% OFF on all Smartphones Today!</div>
+    <div class="slide">🎁 Free Mobile Accessories on Purchase Above ₹20,000!</div>
+    <div class="slide">⏳ Limited Time Offer – EMI Options Available!</div>
+  </div>
+</section>
+
+
   <section class="section" id="products">
     <h2>Available Smartphones (10% OFF!)</h2>
     <div class="products">
